@@ -47,7 +47,7 @@
       <div class="calculator__display">
         <p class="text calculator__solution">399,981</p>
       </div>
-      <div class="calculator__input">
+      <di v class="calculator__input">
         <div class="calculator__row">
           <p class="calculator__button seven">7</p>
           <p class="calculator__button eight">8</p>
@@ -76,7 +76,7 @@
           <button class="control reset text">RESET</button>
           <button class="control equals text">=</button>
         </div>
-      </div>
+      </di>
     </div>
   </body>
   <script>
@@ -85,59 +85,44 @@
 
     range.addEventListener("input", () => {
       const slider_value = range.value;
-      let thumb_color, background_color, del, button, text,third, size="20px";
+      let thumb_color, background_color, del, button_color, text;
       if (slider_value == 1) {
-        thumb_color = "hsl(6, 63%, 50%);";
+        thumb_color = "rgb(255, 0, 0)";
+        del = "";
+        button_color = "";
         background_color = "hsl(222, 26%, 31%)";
         del = "hsl(224, 36%, 15%)";
         text = "white ";
-        slider="hsl(225, 21%, 49%);"
       } else if (slider_value == 2) {
         thumb_color = "hsl(25, 98%, 40%)";
         background_color = "hsl(0, 0%, 90%)";
-        
+        button_color: "hsl(0, 0%, 90%)";
         del = " hsl(185, 42%, 37%)";
-        text = "hsla(0, 0%, 0%, 1)";
-        slider = "hsl(0, 5%, 81%)"
+        text = "black";
       } else {
         thumb_color = "hsl(176, 100%, 44%)";
         background_color = "hsl(268, 75%, 9%)";
-        button= "hsl(268, 47%, 21%)";
-        del = "hsl(281, 89%, 26%)";
+        button_color: "hsl(285, 91%, 52%)";
+        del = " hsl(185, 42%, 37%)";
         text = "hsl(52, 100%, 62%)";
-         third="hsl(52, 100%, 62%)";
-         slider="hsl(281, 89%, 26%)";
       }
       style.innerHTML = `.slider::-webkit-slider-thumb { background-color: ${thumb_color} !important; }
       
       body{
         background-color: ${background_color} !important;
-      }
-      .text{
-          color: ${text} !important;
-      }
-      .slider{
-         background-color: ${slider} !important;
-      }
-      .calculator__display{
-         background-color: ${slider} !important;
-      }
-      .calculator__input{
-         background-color: ${slider} !important;
-         color: ${third} !important;
-         font-size: ${size} !important;
-      }
+        color:"black"
+      } 
       .equals{
        background-color: ${thumb_color} !important;
       }
       .del{
         background-color: ${del} !important;
       }
-     .calculator__button {
-  background-color: ${button} !important;
-}
+      .calculator__button{
+        background-color: ${button_color} !important;
+      }
       .reset{
-        background-color: ${del} !important;
+        background: ${del} !important;
       }
       .slider:-moz-range-thumb {  ${thumb_color} !important; }`;
     });

@@ -85,7 +85,7 @@
 
     range.addEventListener("input", () => {
       const slider_value = range.value;
-      let thumb_color, background_color, del, button, text,third, size="20px";
+      let thumb_color, background_color, del, button_color, text, slider;
       if (slider_value == 1) {
         thumb_color = "hsl(6, 63%, 50%);";
         background_color = "hsl(222, 26%, 31%)";
@@ -95,18 +95,17 @@
       } else if (slider_value == 2) {
         thumb_color = "hsl(25, 98%, 40%)";
         background_color = "hsl(0, 0%, 90%)";
-        
+        // button_color: "hsl(0, 0%, 90%)";
         del = " hsl(185, 42%, 37%)";
         text = "hsla(0, 0%, 0%, 1)";
         slider = "hsl(0, 5%, 81%)"
       } else {
         thumb_color = "hsl(176, 100%, 44%)";
         background_color = "hsl(268, 75%, 9%)";
-        button= "hsl(268, 47%, 21%)";
+        button_color: "hsl(268, 75%, 9%)";
         del = "hsl(281, 89%, 26%)";
         text = "hsl(52, 100%, 62%)";
-         third="hsl(52, 100%, 62%)";
-         slider="hsl(281, 89%, 26%)";
+ 
       }
       style.innerHTML = `.slider::-webkit-slider-thumb { background-color: ${thumb_color} !important; }
       
@@ -124,8 +123,6 @@
       }
       .calculator__input{
          background-color: ${slider} !important;
-         color: ${third} !important;
-         font-size: ${size} !important;
       }
       .equals{
        background-color: ${thumb_color} !important;
@@ -133,11 +130,12 @@
       .del{
         background-color: ${del} !important;
       }
-     .calculator__button {
-  background-color: ${button} !important;
-}
+      .calculator__button{
+        background-color: ${button_color} !important;
+       
+      }
       .reset{
-        background-color: ${del} !important;
+        background: ${del} !important;
       }
       .slider:-moz-range-thumb {  ${thumb_color} !important; }`;
     });
