@@ -136,5 +136,7 @@ body {
   .calculator__smallText{
     font-size: 1em;
   }
-
+  .calculator__name{
+    font-size: 1.5em;
+  }
 }

@@ -112,9 +112,9 @@ body {
   margin-bottom: 20px;
 }
 .control {
-  padding: 2.5% 20% 2.5% 20%;
+  /* padding: 2.5% 20% 2.5% 20%;
   border-radius: 15px;
-  font-size: 2em;
+  font-size: 2em; */
 }
 .reset {
   background-color: hsl(225, 21%, 49%);
@@ -128,13 +128,4 @@ body {
     margin:1rem;
     /* width:100%; */
   }
-  .control{
-  padding: 2.5% 20% 2.5% 20%;
-  border-radius: 15px;
-  font-size: 1em;
-  }
-  .calculator__smallText{
-    font-size: 1em;
-  }
-
 }
