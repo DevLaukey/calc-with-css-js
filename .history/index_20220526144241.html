@@ -53,7 +53,7 @@
           <button class="calculator__button eight calculator_buttons number" data-num="8" onclick="getDetails(this)">8</button>
           <button class="calculator__button nine calculator_buttons number" data-num="9" onclick="getDetails(this)">9</button>
           <button
-            class="control reset calculator_buttons text"
+            class="calculator__button del calculator_buttons"
             style="background-color: hsl(225, 21%, 49%); color: white"
           >
             DEL
@@ -132,12 +132,10 @@
       }
       .del{
         background-color: ${del} !important;
+        color: ${reset} !important;
       }
      .calculator__button {
   background-color: ${button} !important;
-}
-.calculator_buttons{
-color: ${third} !important;
 }
       .reset{
         background-color: ${del} !important;

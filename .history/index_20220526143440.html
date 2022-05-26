@@ -45,7 +45,7 @@
         </div>
       </header>
       <div class="calculator__display">
-        <p class="text calculator__solution" id="calculator__solution"></p>
+        <p class="text calculator__solution" id="viewer"></p>
       </div>
       <div class="calculator__input">
         <div class="calculator__row">
@@ -53,7 +53,7 @@
           <button class="calculator__button eight calculator_buttons number" data-num="8" onclick="getDetails(this)">8</button>
           <button class="calculator__button nine calculator_buttons number" data-num="9" onclick="getDetails(this)">9</button>
           <button
-            class="control reset calculator_buttons text"
+            class="calculator__button del back"
             style="background-color: hsl(225, 21%, 49%); color: white"
           >
             DEL
@@ -73,8 +73,8 @@
           <btn class="calculator__button multiply calculator_buttons ops" data-ops="*" onclick="getDetails(this)">*</btn>
         </div>
         <div class="calculator__control">
-          <button type="reset" class="control reset calculator_buttons text" class="reset">RESET</button>
-          <button class="control equals calculator_buttons text" id="equals" data-result=""> =</button>
+          <button type="reset" class="control reset text" class="reset">RESET</button>
+          <button class="control equals text" id="equals" data-result=""> =</button>
         </div>
       </div>
     </div>
@@ -135,9 +135,6 @@
       }
      .calculator__button {
   background-color: ${button} !important;
-}
-.calculator_buttons{
-color: ${third} !important;
 }
       .reset{
         background-color: ${del} !important;

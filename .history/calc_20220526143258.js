@@ -1,19 +1,18 @@
 let display = document.getElementById('calculator__solution');
 
-let buttons = Array.from(document.getElementsByClassName('calculator_buttons'));
+let buttons = Array.from(document.getElementsByClassName('calculator__button'));
 
 buttons.map( button => {
     button.addEventListener("click", (e) => {
         
         switch(e.target.innerText){
-            case 'RESET':
+            case 'Reset':
                 display.innerText = '';
                 break;
-            case 'DEL':
+            case 'Del':
                 if(display.innerText)
                 {display.innerText = display.innerText.slice(0,-1);}
-            break;
-        
+                break;
             case '=' :
                  try {
                     display.innerText = eval(display.innerText);

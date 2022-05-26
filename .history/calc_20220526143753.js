@@ -12,8 +12,7 @@ buttons.map( button => {
             case 'DEL':
                 if(display.innerText)
                 {display.innerText = display.innerText.slice(0,-1);}
-            break;
-        
+                break;
             case '=' :
                  try {
                     display.innerText = eval(display.innerText);
